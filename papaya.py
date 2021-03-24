@@ -258,7 +258,7 @@ def get_password(username, pw_length):
             response = send_sessionless_post(params)
 
             if is_successfull(success_string, response):
-                if count == 0:
+                if count == -1:
                     log(f"Password found: {password}")
                     return password
                 password = password + c
